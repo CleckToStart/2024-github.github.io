@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Greeting</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 使 body 撑满整个视口高度 */
+            background: linear-gradient(to bottom right, #87CEEB, #ADD8E6); /* 使用渐变背景色 */
+        }
+
+        #new-year-card {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #back-to-carousel-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #back-to-carousel-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="new-year-card">
+        <h3>最后一次</h3>
+        <h1>!元旦快乐!</h1>
+        <p>将最真挚的祝福献给你，将最美好的期许托付给你</p>
+        <p>愿接下来的一年，你能快乐常伴；愿接下来的一年，你能幸福常伴。</p>
+        <p>mua</p>
+        <!-- Add more content as needed -->
+        <button id="back-to-carousel-btn" onclick="backToCarousel()">回到照片</button>
+    </div>
+
+    <script>
+        function backToCarousel() {
+            // Redirect back to the photo carousel page
+            window.location.href = "./images.html";
+        }
+    </script>
+</body>
+</html>

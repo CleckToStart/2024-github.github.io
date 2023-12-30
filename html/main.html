@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Greeting Card</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        #greeting-card {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 50px;
+        }
+
+        #greeting-card h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #greeting-card img {
+            max-width: 100%;
+            max-height: 400px; /* 设置最大高度，以防止图片过于拉伸 */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+
+        #greeting-card p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #greeting-card button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #greeting-card button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="greeting-card">
+        <h1>元旦快乐！</h1>
+        <img src="../image/img1.jpg" alt="New Year Image">
+        <p>新 的 一 年 也 要 加 油 噢 ~</p>
+        <button onclick="redirectToAnotherPage()">Explore More</button>
+    </div>
+
+    <script>
+        function redirectToAnotherPage() {
+            // Redirect to another HTML page
+            window.location.href = "./images.html";
+        }
+    </script>
+</body>
+</html>
