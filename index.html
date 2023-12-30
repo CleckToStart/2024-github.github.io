@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #greeting-card {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 50px;
+        }
+
+        #countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="greeting-card">
+        <h1>元旦快乐</h1>
+        <p>新的一年也要元气满满噢~</p>
+        <!-- Add more personalized content here -->
+    </div>
+
+    <div id="countdown"></div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const newYear = new Date(now.getFullYear() + 1, 0, 1); // Assuming next year's New Year
+
+            const timeDiff = newYear - now;
+
+            if (timeDiff <= 0) {
+                // Redirect to another HTML page when countdown is over
+                window.location.href = "html/main.html";
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `
+                <p>距离新的一年还有:</p>
+                <p>${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</p>
+            `;
+
+            // Update every second
+            setTimeout(updateCountdown, 1000);
+        }
+
+        // Initial call
+        updateCountdown();
+    </script>
+</body>
+</html>
